@@ -29,18 +29,28 @@ var chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
         if (alphabet.indexOf(keyPressed) === -1){
             alert("Please enter a valid letter!")
         } else if (alphabet.indexOf(keyPressed) > -1){
-            remainingGuesses--;
-            document.getElementById("guesses").innerHTML = remainingGuesses;
+            var isLetterFound = false;
             for ( j = 0; j < chosenWord.length; j++){
                 if(splitWord[j] === keyPressed){
                     blanks[j] = keyPressed;
                     document.getElementById("currentWord").innerHTML = blanks.join("");
+                    isLetterFound = true;
                     console.log(blanks);
+                    
+                } 
+
+                }
+            if ( isLetterFound === false) {
+                if (document.getElementById("lettersChosen").innerHTML.indexOf(keyPressed) === -1){
+                    document.getElementById("lettersChosen").innerHTML = document.getElementById("lettersChosen").innerHTML + keyPressed;
+                    remainingGuesses--;
+                    document.getElementById("guesses").innerHTML = remainingGuesses;
                     
                 }
             }
+            }
         }
-    }
+    
 
         // if ( chosenWord.indexOf(keyPressed) > -1)
         // { console.log(keyPressed);
