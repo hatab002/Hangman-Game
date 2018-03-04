@@ -49,7 +49,13 @@ var chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
                 }
             }
             }
-        }
+        };
+
+        var button = document.getElementById("button");
+        button.addEventListener("click", function buttonFunction(){
+            location.reload();
+        })
+        
     
 
         // if ( chosenWord.indexOf(keyPressed) > -1)
