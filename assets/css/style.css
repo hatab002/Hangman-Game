@@ -7,10 +7,10 @@ body {
     
 }
 p {
-    font-size: 30px;
+    font-size: 25px;
 }
 h3 {
-    font-size: 40px;
+    font-size: 30px;
 }
 .jumbotron {
     background-color: rgb(157, 93, 187);
@@ -18,7 +18,11 @@ h3 {
 #button, #button1 {
     background-color: mediumslateblue;
     height: 40px;
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 50px;
     padding-bottom: 40px;
+}
+
+#img {
+    margin-top: 30px;
 }
